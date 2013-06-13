@@ -1,0 +1,171 @@
+##############################################################################
+#
+# This is the setup file for the task/resource system.  From here, you can
+# setup the available resources (including their inflow and outflow rates) as
+# well as the reactions that the organisms can trigger by performing tasks.
+#
+# this environmental setup rewards all one-, two- and three-input logic
+# operations available.
+#
+# For information on how to use this file, see:  doc/environment.html
+# For other sample environments, see:  source/support/config/ 
+#
+##############################################################################
+
+# Resources
+RESOURCE resNOT:inflow=10:outflow=0.01
+RESOURCE resNAND:inflow=10:outflow=0.01
+RESOURCE resAND:inflow=10:outflow=0.01
+RESOURCE resORN:inflow=10:outflow=0.01
+RESOURCE resOR:inflow=10:outflow=0.01
+RESOURCE resANDN:inflow=10:outflow=0.01
+RESOURCE resNOR:inflow=10:outflow=0.01
+RESOURCE resXOR:inflow=10:outflow=0.01
+RESOURCE resEQU:inflow=10:outflow=0.01
+RESOURCE resLOG3AA:inflow=10:outflow=0.01
+RESOURCE resLOG3AB:inflow=10:outflow=0.01
+RESOURCE resLOG3AC:inflow=10:outflow=0.01
+RESOURCE resLOG3AD:inflow=10:outflow=0.01
+RESOURCE resLOG3AE:inflow=10:outflow=0.01
+RESOURCE resLOG3AF:inflow=10:outflow=0.01
+RESOURCE resLOG3AG:inflow=10:outflow=0.01
+RESOURCE resLOG3AH:inflow=10:outflow=0.01
+RESOURCE resLOG3AI:inflow=10:outflow=0.01
+RESOURCE resLOG3AJ:inflow=10:outflow=0.01
+RESOURCE resLOG3AK:inflow=10:outflow=0.01
+RESOURCE resLOG3AL:inflow=10:outflow=0.01
+RESOURCE resLOG3AM:inflow=10:outflow=0.01
+RESOURCE resLOG3AN:inflow=10:outflow=0.01
+RESOURCE resLOG3AO:inflow=10:outflow=0.01
+RESOURCE resLOG3AP:inflow=10:outflow=0.01
+RESOURCE resLOG3AQ:inflow=10:outflow=0.01
+RESOURCE resLOG3AR:inflow=10:outflow=0.01
+RESOURCE resLOG3AS:inflow=10:outflow=0.01
+RESOURCE resLOG3AT:inflow=10:outflow=0.01
+RESOURCE resLOG3AU:inflow=10:outflow=0.01
+RESOURCE resLOG3AV:inflow=10:outflow=0.01
+RESOURCE resLOG3AW:inflow=10:outflow=0.01
+RESOURCE resLOG3AX:inflow=10:outflow=0.01
+RESOURCE resLOG3AY:inflow=10:outflow=0.01
+RESOURCE resLOG3AZ:inflow=10:outflow=0.01
+RESOURCE resLOG3BA:inflow=10:outflow=0.01
+RESOURCE resLOG3BB:inflow=10:outflow=0.01
+RESOURCE resLOG3BC:inflow=10:outflow=0.01
+RESOURCE resLOG3BD:inflow=10:outflow=0.01
+RESOURCE resLOG3BE:inflow=10:outflow=0.01
+RESOURCE resLOG3BF:inflow=10:outflow=0.01
+RESOURCE resLOG3BG:inflow=10:outflow=0.01
+RESOURCE resLOG3BH:inflow=10:outflow=0.01
+RESOURCE resLOG3BI:inflow=10:outflow=0.01
+RESOURCE resLOG3BJ:inflow=10:outflow=0.01
+RESOURCE resLOG3BK:inflow=10:outflow=0.01
+RESOURCE resLOG3BL:inflow=10:outflow=0.01
+RESOURCE resLOG3BM:inflow=10:outflow=0.01
+RESOURCE resLOG3BN:inflow=10:outflow=0.01
+RESOURCE resLOG3BO:inflow=10:outflow=0.01
+RESOURCE resLOG3BP:inflow=10:outflow=0.01
+RESOURCE resLOG3BQ:inflow=10:outflow=0.01
+RESOURCE resLOG3BR:inflow=10:outflow=0.01
+RESOURCE resLOG3BS:inflow=10:outflow=0.01
+RESOURCE resLOG3BT:inflow=10:outflow=0.01
+RESOURCE resLOG3BU:inflow=10:outflow=0.01
+RESOURCE resLOG3BV:inflow=10:outflow=0.01
+RESOURCE resLOG3BW:inflow=10:outflow=0.01
+RESOURCE resLOG3BX:inflow=10:outflow=0.01
+RESOURCE resLOG3BY:inflow=10:outflow=0.01
+RESOURCE resLOG3BZ:inflow=10:outflow=0.01
+RESOURCE resLOG3CA:inflow=10:outflow=0.01
+RESOURCE resLOG3CB:inflow=10:outflow=0.01
+RESOURCE resLOG3CC:inflow=10:outflow=0.01
+RESOURCE resLOG3CD:inflow=10:outflow=0.01
+RESOURCE resLOG3CE:inflow=10:outflow=0.01
+RESOURCE resLOG3CF:inflow=10:outflow=0.01
+RESOURCE resLOG3CG:inflow=10:outflow=0.01
+RESOURCE resLOG3CH:inflow=10:outflow=0.01
+RESOURCE resLOG3CI:inflow=10:outflow=0.01
+RESOURCE resLOG3CJ:inflow=10:outflow=0.01
+RESOURCE resLOG3CK:inflow=10:outflow=0.01
+RESOURCE resLOG3CL:inflow=10:outflow=0.01
+RESOURCE resLOG3CM:inflow=10:outflow=0.01
+RESOURCE resLOG3CN:inflow=10:outflow=0.01
+RESOURCE resLOG3CO:inflow=10:outflow=0.01
+RESOURCE resLOG3CP:inflow=10:outflow=0.01
+
+# Reactions
+REACTION  NOT  not   process:resource=resNOT:value=1.0:frac=0.0025:max=5
+REACTION  NAND nand  process:resource=resNAND:value=1.0:frac=0.0025:max=5
+REACTION  AND  and   process:resource=resAND:value=1.0:frac=0.0025:max=5
+REACTION  ORN  orn   process:resource=resORN:value=1.0:frac=0.0025:max=5
+REACTION  OR   or    process:resource=resOR:value=1.0:frac=0.0025:max=5
+REACTION  ANDN andn  process:resource=resANDN:value=1.0:frac=0.0025:max=5
+REACTION  NOR  nor   process:resource=resNOR:value=1.0:frac=0.0025:max=5
+REACTION  XOR  xor   process:resource=resXOR:value=1.0:frac=0.0025:max=5
+REACTION  EQU  equ   process:resource=resEQU:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AA  logic_3AA  process:resource=resLOG3AA:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AB  logic_3AB  process:resource=resLOG3AB:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AC  logic_3AC  process:resource=resLOG3AC:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AD  logic_3AD  process:resource=resLOG3AD:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AE  logic_3AE  process:resource=resLOG3AE:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AF  logic_3AF  process:resource=resLOG3AF:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AG  logic_3AG  process:resource=resLOG3AG:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AH  logic_3AH  process:resource=resLOG3AH:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AI  logic_3AI  process:resource=resLOG3AI:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AJ  logic_3AJ  process:resource=resLOG3AJ:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AK  logic_3AK  process:resource=resLOG3AK:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AL  logic_3AL  process:resource=resLOG3AL:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AM  logic_3AM  process:resource=resLOG3AM:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AN  logic_3AN  process:resource=resLOG3AN:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AO  logic_3AO  process:resource=resLOG3AO:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AP  logic_3AP  process:resource=resLOG3AP:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AQ  logic_3AQ  process:resource=resLOG3AQ:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AR  logic_3AR  process:resource=resLOG3AR:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AS  logic_3AS  process:resource=resLOG3AS:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AT  logic_3AT  process:resource=resLOG3AT:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AU  logic_3AU  process:resource=resLOG3AU:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AV  logic_3AV  process:resource=resLOG3AV:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AW  logic_3AW  process:resource=resLOG3AW:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AX  logic_3AX  process:resource=resLOG3AX:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AY  logic_3AY  process:resource=resLOG3AY:value=1.0:frac=0.0025:max=5
+REACTION  LOG3AZ  logic_3AZ  process:resource=resLOG3AZ:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BA  logic_3BA  process:resource=resLOG3BA:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BB  logic_3BB  process:resource=resLOG3BB:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BC  logic_3BC  process:resource=resLOG3BC:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BD  logic_3BD  process:resource=resLOG3BD:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BE  logic_3BE  process:resource=resLOG3BE:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BF  logic_3BF  process:resource=resLOG3BF:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BG  logic_3BG  process:resource=resLOG3BG:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BH  logic_3BH  process:resource=resLOG3BH:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BI  logic_3BI  process:resource=resLOG3BI:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BJ  logic_3BJ  process:resource=resLOG3BJ:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BK  logic_3BK  process:resource=resLOG3BK:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BL  logic_3BL  process:resource=resLOG3BL:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BM  logic_3BM  process:resource=resLOG3BM:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BN  logic_3BN  process:resource=resLOG3BN:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BO  logic_3BO  process:resource=resLOG3BO:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BP  logic_3BP  process:resource=resLOG3BP:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BQ  logic_3BQ  process:resource=resLOG3BQ:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BR  logic_3BR  process:resource=resLOG3BR:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BS  logic_3BS  process:resource=resLOG3BS:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BT  logic_3BT  process:resource=resLOG3BT:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BU  logic_3BU  process:resource=resLOG3BU:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BV  logic_3BV  process:resource=resLOG3BV:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BW  logic_3BW  process:resource=resLOG3BW:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BX  logic_3BX  process:resource=resLOG3BX:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BY  logic_3BY  process:resource=resLOG3BY:value=1.0:frac=0.0025:max=5
+REACTION  LOG3BZ  logic_3BZ  process:resource=resLOG3BZ:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CA  logic_3CA  process:resource=resLOG3CA:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CB  logic_3CB  process:resource=resLOG3CB:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CC  logic_3CC  process:resource=resLOG3CC:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CD  logic_3CD  process:resource=resLOG3CD:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CE  logic_3CE  process:resource=resLOG3CE:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CF  logic_3CF  process:resource=resLOG3CF:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CG  logic_3CG  process:resource=resLOG3CG:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CH  logic_3CH  process:resource=resLOG3CH:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CI  logic_3CI  process:resource=resLOG3CI:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CJ  logic_3CJ  process:resource=resLOG3CJ:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CK  logic_3CK  process:resource=resLOG3CK:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CL  logic_3CL  process:resource=resLOG3CL:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CM  logic_3CM  process:resource=resLOG3CM:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CN  logic_3CN  process:resource=resLOG3CN:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CO  logic_3CO  process:resource=resLOG3CO:value=1.0:frac=0.0025:max=5
+REACTION  LOG3CP  logic_3CP  process:resource=resLOG3CP:value=1.0:frac=0.0025:max=5

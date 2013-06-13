@@ -1,0 +1,14 @@
+# Information about the groups joined and used by the organisms
+# Tue Jan 31 11:59:08 2012
+#  1: Update [update]
+#  2: number of groups [num]
+#  3: average size of groups [avgsize]
+#  4: average size of  non-emptygroups [avgsizene]
+#  5: max size of groups [maxsize]
+#  6: min size of groups [minsize]
+#  7: active groups [actgroup]
+#  8: groups per org life [groupsperorg]
+
+10 10 14 20 51 0 7 0.35 
+20 10 39.9 39.9 78 10 10 0.9975 
+30 10 39.9 39.9 62 14 10 0.9975 
